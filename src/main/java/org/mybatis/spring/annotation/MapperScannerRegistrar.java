@@ -141,7 +141,7 @@ public class MapperScannerRegistrar implements ImportBeanDefinitionRegistrar, Re
 
     builder.addPropertyValue("basePackage", StringUtils.collectionToCommaDelimitedString(basePackages));
 
-    // for spring-native
+    // for spring-native 对于春季本地人
     builder.setRole(BeanDefinition.ROLE_INFRASTRUCTURE);
 
     registry.registerBeanDefinition(beanName, builder.getBeanDefinition());

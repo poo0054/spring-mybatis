@@ -3,7 +3,6 @@ package poo0054.springMybatis.config;
 import com.alibaba.druid.pool.DruidDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
-import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.annotation.MapperScan;
 import org.mybatis.spring.annotation.MapperScans;
 import org.springframework.context.annotation.Bean;
@@ -41,10 +40,17 @@ public class MyBatisConfig {
     return factoryBean.getObject();
   }
 
+/*  @Bean
+  public MapperFactoryBean<TableAttributeDao> userMapper() throws Exception {
+    MapperFactoryBean<TableAttributeDao> mapperFactoryBean = new MapperFactoryBean<>(TableAttributeDao.class);
+    mapperFactoryBean.setSqlSessionFactory(sqlSessionFactory());
+    return mapperFactoryBean;
+  }
+
   @Bean
   public SqlSessionTemplate sqlSession() throws Exception {
     return new SqlSessionTemplate(sqlSessionFactory());
-  }
+  }*/
 
   //  @Bean
   public JtaTransactionManager transactionManager() {
